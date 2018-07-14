@@ -1,8 +1,0 @@
-.inputs {
-  list-style: none;
-  width: 20em;
-
-  & > li {
-    margin: 1em 0;
-  }
-}
