@@ -1,0 +1,36 @@
+.album-button {
+    width: 200px;
+    margin: 0 1em 1em 1em;
+    cursor: pointer;
+    animation: fadeIn 0.25s;
+
+    img {
+        flex: 1;
+        height: auto;
+        max-width: 100%;
+        border: 1px solid $borderColor;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    .album-button-text, .album-button-subtext {
+        font-weight: normal;
+        font-size: 1em;
+        margin: 0.1em 0;
+    }
+
+    .album-button-subtext {
+        color: rgb(150,150,150);
+    }
+
+    @media screen and (max-width: 750px) {
+        max-width: 40%;
+        margin: 0.5em 0.5em 0.5em;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.mini-controls {
+    $duration: 0.35s;
+    $transition: all $duration ease;
+
+    position: relative;
+    height: 3em;
+    width: 100%;
+    cursor: pointer;
+    border-left: 1px solid $borderColor;
+    box-sizing: border-box;
+    background: rgba(245,245,245,0.8);
+    transition: $transition;
+
+    @media #{$mobile} {
+        &:not(.fullscreen) {
+            border: none;
+            height: 4em;
+            border-bottom: 1px solid $borderColor;
+            border-top: 1px solid $borderColor;
+
+            .info-container {
+                height: 4em;
+            }
+
+            .artwork-container {
+                height: 4em;
+                width: 4.5em;
+                padding: 0.4em;
+
+                .artwork {
+                    height: 3em;
+                    width: auto;
+                    border-radius: 2px;
+                    box-shadow: 0 3px 10px #00000059;
+                }
+            }
+        }
+    }
+
+    &.fullscreen {
+        height: 30vh;
+        border: none;
+        margin-bottom: 1em;
+        background: white;
+        cursor: default;
+
+
+        &.playing {
+            .artwork, .artwork-blur {
+                margin-top: 0.5em;
+                transform: scale(1.2);
+                box-shadow: 0 10px 30px #775c5c;
+            }
+        }
+
+        .artwork-container {
+            height: 40vh;
+            width: 100%;
+            padding: 1.3em 0;
+
+            .artwork, .artwork-blur {
+                height: 18em;
+                max-height: 80%;
+                border-radius: 4px;
+            }
+        }
+
+        .info-container {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .artwork-container {
+        position: relative;
+        height: 3em;
+        max-height: 100%;
+        width: 3em;
+        padding: 0.2em;
+        text-align: center;
+        transition: $transition;
+
+        .artwork, .artwork-blur {
+            height: 2.5em;
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+            pointer-events: none;
+            user-select: none;
+            transition: $transition;
+        }
+
+        .artwork-blur{
+            position: absolute;
+            display: none;
+        }
+    }
+
+    .info-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5em;
+        transition: $transition;
+
+        .song-name {
+            margin: auto 0;
+            font-weight: normal;
+            color: rgb(100,100,100);
+            font-size: 0.9em;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1em;
+
+        img {
+            height: 1.5em;
+            width: 1.5em;
+            margin: 0 0.5em;
+        }
+
+        .play, .pause {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        .skip {
+            width: 1.8em;
+            height: 1.8em;
+        }
+    }
+}

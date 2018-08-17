@@ -1,0 +1,15 @@
+.artist-list-view {
+    .artist-button-container {
+        padding-left: 1em;
+
+        .nav-button {
+            animation: fadein 0.5s;
+        }
+    }
+
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+    }
+}

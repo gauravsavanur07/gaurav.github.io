@@ -1,0 +1,49 @@
+.bottom-bar {
+    position: fixed;
+    bottom :0;
+    right: 0;
+    height: 3em;
+    width: 100%;
+    display: flex;
+
+    @media #{$mobile} {
+        flex-direction: column-reverse;
+        height: 7em;
+    }
+}
+
+.navigation {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid rgba(0,0,0,0.12);
+    background: rgb(255,255,255);
+    transition: all 0.4s ease;
+
+    @media #{$mobile} {
+        z-index: 1;
+        margin-top: 4em;
+        justify-content: space-around;
+    }
+}
+
+.section-nav-button {
+    display: flex;
+    align-items: center;
+    margin: 0 1em;
+    cursor: pointer;
+    color: rgba(0,0,0,0.4);
+
+    svg {
+        margin-right: 0.5em;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    &.selected {
+        color: $red;
+    }
+}

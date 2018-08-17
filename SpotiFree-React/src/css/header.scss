@@ -1,0 +1,70 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 70em;
+    margin: auto;
+    height: 3em;
+    display: flex;
+    background: white;
+
+    &.relative {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .left-container, .mid-container, .right-container {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    .left-container {
+        padding-left: 0.5em;
+    }
+
+    .mid-container {
+        justify-content: center;
+    }
+
+    .right-container {
+        justify-content: flex-end;
+        padding-right: 1em;
+    }
+
+    .header-title {
+        margin: auto 0;
+        transition: all 0.25s ease-in-out;
+
+        &.invisible {
+            opacity: 0;
+            user-select: none;
+        }
+    }
+
+    .back-button {
+        display: flex;
+        height: 100%;
+        font-size: 1em;
+        cursor: pointer;
+        color: #ff2d55;
+
+        h3, .svg {
+            margin: auto 0;
+            font-weight: normal;
+        }
+
+        svg {
+            margin: auto 0;
+        }
+    }
+
+    .cancel-button, .done-button {
+        font-weight: normal;
+        color: $red;
+        cursor: pointer;
+    }
+}
